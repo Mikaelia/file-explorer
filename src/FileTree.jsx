@@ -5,14 +5,14 @@ import FolderIcon from '@mui/icons-material/Folder';
 import InsertDriveFileOutlinedIcon from '@mui/icons-material/InsertDriveFileOutlined';
 
 const File = ({ name, contents }) => {
-    const {setActiveFile} = useActiveFile();
+    const {setActiveFile, activeFile} = useActiveFile();
     const handleSetActiveFile = (file) => {
         setActiveFile(file);
     };
 
     return (
     <div className="file" onClick={() => handleSetActiveFile({name, contents})}>
-        <span className="name"><InsertDriveFileOutlinedIcon  className="name-icon"/>{name}</span>
+        <span className={`${activeFile.name === name ? "active" : ""} name`}><InsertDriveFileOutlinedIcon  className="name-icon"/>{name}</span>
     </div>
     )
 }

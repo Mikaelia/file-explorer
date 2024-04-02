@@ -51,7 +51,7 @@ body {
 }
 
 .file-manager {
-    width: 60vw;
+    width: 70vw;
     height: 80vh;
     border: 1px solid var(--border-color);
     display: flex;
@@ -129,7 +129,7 @@ body {
     width: 100%;
 }
 
-.name:hover {
+.name:hover, .name.active {
     background: var(--border-color)
 }
 
