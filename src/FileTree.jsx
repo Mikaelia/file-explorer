@@ -12,7 +12,7 @@ const File = ({ name, contents }) => {
 
     return (
     <div className="file" onClick={() => handleSetActiveFile({name, contents})}>
-        <span className={`${activeFile.name === name ? "active" : ""} name`}><InsertDriveFileOutlinedIcon  className="name-icon"/>{name}</span>
+        <span className={`${activeFile?.name === name ? "active" : ""} name`}><InsertDriveFileOutlinedIcon  className="name-icon"/>{name}</span>
     </div>
     )
 }

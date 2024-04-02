@@ -13,7 +13,7 @@ function App() {
             <div className="file-manager">
                 <div className="file-section">
                     <h1>File Manager</h1>
-                    <div className="file-container">
+                    <div className="file-carontainer">
                         <FileTree data={nestedFileTree}></FileTree>
                     </div>
                 </div>
