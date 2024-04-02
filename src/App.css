@@ -1,0 +1,150 @@
+
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    --border-color: rgba(166, 215, 227, .1)
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    font-size: 14px;
+    position: relative;
+    background-color: #020306;
+    overflow: hidden;
+}
+
+.app {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.background {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vw;
+    background-size: cover;
+    animation: rotateImage 600s linear infinite;
+    background-image: url('./assets/imaginary-flavour.jpg');
+    background-position: center;
+}
+
+@keyframes rotateImage {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.file-manager {
+    width: 60vw;
+    height: 80vh;
+    border: 1px solid var(--border-color);
+    display: flex;
+    border-radius: .5rem;
+    backdrop-filter: blur(20px);
+    overflow: hidden;
+}
+
+.file-section {
+    height: 100%;
+    border-right: 1px solid var(--border-color);
+    background-color: rgba(8, 18, 42, .5);
+    width: 40%;
+    overflow: hidden;
+}
+
+.file-section h1 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem;
+    color: white;
+    height: 4rem;
+}
+
+.file-container {
+    padding: 1rem;
+}
+
+.display-section {
+    width: 60%;
+    overflow: hidden;
+}
+
+.tab {
+    display: flex;
+}
+
+.close-icon {
+    background-image: url('./assets/x-svg.svg');
+    height: .75rem;
+    width: .75rem;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.tab-right {
+    flex-grow: 1;
+    border-bottom: 1px solid var(--border-color);
+    height: 4rem;
+}
+
+.active-tab {
+    display: flex;
+    align-items: center;
+    border-right: 1px solid var(--border-color);
+    padding: 1rem;
+}
+
+.active-tab h1 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-right: 1rem;
+    color: white;
+    width: auto
+}
+
+.name {
+    display: flex;
+    align-items: center;
+    padding: .5rem;
+    border-radius: .5rem;
+    transition: background-color .2s ease;
+    cursor: pointer;
+    width: 100%;
+}
+
+.name:hover {
+    background: var(--border-color)
+}
+
+.name-icon {
+    margin-right: .5rem;
+}
+
+.file {
+    margin-left: 1.25rem;
+}
+
+.folder {
+    margin-left: 20px;
+}
+
+.file-content {
+    padding: 1rem;
+}
